@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Devy Portfolio.">
+	<main>
+		<h1><span class="text-gradient">Devy Notes</span></h1>
+    <p class="paragraph">
+      Devy Notes es un notes manager el proporciona la posibilidad de editar notas de una manera muy cómoda y partir de markdawn. 
+    </p>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	main {
+		padding: 1em;
+		text-align: center;
+	}
+
+	.paragraph {
+		margin: 28px auto;
+		max-width: 900px;
+		text-align: center;
+		font-size: 1.2em;
+	}
+
+	.projects {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		gap: 10px
+	}
+
+	@media (max-width: 660px) {
+		.projects {
+			flex-direction: column;
+		}
+
+		.paragraph {
+			text-align: left;
+		}
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+</style>
